@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Shorts Clone</title>
+    <link rel="stylesheet" href="./asset/css/output.css">
+    <style>
+        /* Custom scrollbar hiding */
+        .overflow-y-scroll {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .overflow-y-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            max-width: 400px;
+            /* Limit width on larger screens */
+            max-height: 700px;
+            /* Limit height */
+            border-radius: 10px;
+        }
+
+        /* Responsive text sizing */
+        @media (max-width: 640px) {
+            .creator-text {
+                font-size: 0.8rem;
+            }
+
+            .action-buttons button {
+                padding: 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <!-- Shorts Container (Fullscreen Vertical Scroll) -->
+    <div class="h-screen w-full overflow-y-scroll snap-y snap-mandatory">
+        <!-- Short 1 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center">
+            <!-- Video Placeholder (Replace with actual <video> tag) -->
+            <div class="absolute inset-0 bg-gray-800 flex flex-col md:flex-row items-center justify-center p-4 gap-4">
+                <p class="text-2xl m-28 text-white text-center md:text-left">Sroll Down👇<br>& Enjoy😍 <br>😎</p>
+                <iframe
+                    src="https://www.youtube.com/embed/2X0GuU2hY0U?autoplay=1&controls=1&mute=1&loop=1&playlist=2X0GuU2hY0U&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <!-- Bottom Controls -->
+            <div class="absolute bottom-10 left-4 right-4">
+                <div class="flex items-end justify-between">
+                    <!-- Creator Info -->
+                    <div class="flex items-center space-x-2 text-white </div>creator-text">
+                        <div class="w-10 h-10 rounded-full bg-purple-500 flex-shrink-0"></div>
+                        <span>@Daily developer🫡Channel</span>
+                    </div>
+                    <!-- Like/Share Buttons -->
+                    <div class="flex flex-col space-y-4 items-center">
+                        <button class="p-2 rounded-full bg-gray-800/80 text-white action-buttons">❤️ 1.2K</button>
+                        <button class="p-2 rounded-full bg-gray-800/80 text-white action-buttons">🔗 Share</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Short 2 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-700">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/JNo2MAad27s?autoplay=1&controls=1&mute=1&loop=1&playlist=JNo2MAad27s&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 2</p>
+        </div>
+
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/I1Bfg3I8aPY?autoplay=1&controls=1&mute=1&loop=1&playlist=I1Bfg3I8aPY&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 4 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/6vHEVJDbYGA?autoplay=1&controls=1&mute=1&loop=1&playlist=6vHEVJDbYGA&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 5 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/Fg6_scNVwTQ?autoplay=1&controls=1&mute=1&loop=1&playlist=Fg6_scNVwTQ&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 6 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/4gYZLNcSpQw?autoplay=1&controls=1&mute=1&loop=1&playlist=4gYZLNcSpQw&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 7 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/tjQJZuk8twk?autoplay=1&controls=1&mute=1&loop=1&playlist=tjQJZuk8twk&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+        <!-- Short 3 -->
+        <div class="h-screen w-full snap-start relative flex items-center justify-center bg-gray-600">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <iframe
+                    src="https://www.youtube.com/embed/9TSUjmzL-c4?autoplay=1&controls=1&mute=1&loop=1&playlist=9TSUjmzL-c4&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <p class="text-2xl text-white absolute bottom-20">Short Video 3</p>
+        </div>
+    </div>
+</body>
+
+</html>

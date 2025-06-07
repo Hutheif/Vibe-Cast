@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineVerse - Your Ultimate Movie Destination</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+        }
+
+        .movie-card {
+            transition: transform 0.3s ease;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+        }
+
+        .search-box {
+            backdrop-filter: blur(10px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="bg-black bg-opacity-90 fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-film text-red-600 text-2xl"></i>
+                <span class="text-2xl font-bold">Cine<span class="text-red-600">Verse</span></span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-red-500 transition">Home</a>
+                <a href="#" class="hover:text-red-500 transition">Movies</a>
+                <a href="#" class="hover:text-red-500 transition">TV Shows</a>
+                <a href="#" class="hover:text-red-500 transition">Genres</a>
+                <a href="#" class="hover:text-red-500 transition">About</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <button class="hidden md:block bg-red-600 hover:bg-red-700 px-4 py-2 rounded-full transition">
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center pt-20">
+        <div class="container mx-auto px-4 text-center fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Unlimited Movies, TV Shows & More</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Watch anywhere. Cancel anytime. Ready to watch? Enter
+                your email to create or restart your membership.</p>
+
+            <div class="search-box bg-black bg-opacity-50 p-4 rounded-lg max-w-2xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-2">
+                    <input type="email" placeholder="Email address"
+                        class="flex-grow px-4 py-3 rounded bg-gray-800 bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-red-500">
+                    <button
+                        class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded font-semibold transition flex items-center justify-center">
+                        Get Started <i class="fas fa-chevron-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Movies -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-bold">Featured Movies</h2>
+                <a href="#" class="text-red-500 hover:underline flex items-center">
+                    See All <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="movie-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg"
+                            alt="The Dark Knight"
+                            class="w-full h-auto rounded-lg transition duration-300 group-hover:opacity-70">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
+                            <button
+                                class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-300 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                            9.0/10
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg truncate">The Dark Knight</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>2008</span>
+                        <span>Action</span>
+                    </div>
+                </div>
+
+                <div class="movie-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg"
+                            alt="Inception"
+                            class="w-full h-auto rounded-lg transition duration-300 group-hover:opacity-70">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
+                            <button
+                                class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-300 bg red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                            8.8/10
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg truncate">Inception</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>2010</span>
+                        <span>Sci-Fi</span>
+                    </div>
+                </div>
+
+                <div class="movie-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+                            alt="Interstellar"
+                            class="w-full h-auto rounded-lg transition duration-300 group-hover:opacity-70">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
+                            <button
+                                class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-300 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                            8.6/10
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg truncate">Interstellar</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>2014</span>
+                        <span>Adventure</span>
+                    </div>
+                </div>
+
+                <div class="movie-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg"
+                            alt="The Shawshank Redemption"
+                            class="w-full h-auto rounded-lg transition duration-300 group-hover:opacity-70">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
+                            <button
+                                class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-300 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                            9.3/10
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg truncate">The Shawshank Redemption</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>1994</span>
+                        <span>Drama</span>
+                    </div>
+                </div>
+
+                <div class="movie-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
+                            alt="Pulp Fiction"
+                            class="w-full h-auto rounded-lg transition duration-300 group-hover:opacity-70">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
+                            <button
+                                class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-300 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                            8.9/10
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg truncate">Pulp Fiction</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>1994</span>
+                        <span>Crime</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Now -->
+    <section class="py-16 bg-gray-800 bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-bold">Trending Now</h2>
+                <a href="#" class="text-red-500 hover:underline flex items-center">
+                    See All <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="movie-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
+                            alt="The Godfather"
+                            class="w-full h-auto rounded-lg transition duration-300 group-hover:opacity-70">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
+                            <button
+                                class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-300 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                            9.2/10
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg truncate">The Godfather</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>1972</span>
+                        <span>Crime</span>
+                    </div>
+                </div>
+
+                <div class="movie-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="images/p30027439_v_v13_aa.jpg" alt="Fight Club"
+                            class="w-full h-auto rounded-lg transition duration-300 group-hover:opacity-70">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
+                            <button
+                                class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-300 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                            8.8/10
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg truncate">Fight Club</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>1999</span>
+                        <span>Drama</span>
+                    </div>
+                </div>
+
+                <div class="movie-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"
+                            alt="The Matrix"
+                            class="w-full h-auto rounded-lg transition duration-300 group-hover:opacity-70">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
+                            <button
+                                class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-300 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                            8.7/10
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg truncate">The Matrix</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>1999</span>
+                        <span>Sci-Fi</span>
+                    </div>
+                </div>
+
+                <div class="movie-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg"
+                            alt="Parasite"
+                            class="w-full h-auto rounded-lg transition duration-300 group-hover:opacity-70">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
+                            <button
+                                class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-300 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                            8.6/10
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg truncate">Parasite</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>2019</span>
+                        <span>Thriller</span>
+                    </div>
+                </div>
+
+                <div class="movie-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg"
+                            alt="Avengers: Endgame"
+                            class="w-full h-auto rounded-lg transition duration-300 group-hover:opacity-70">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
+                            <button
+                                class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-300 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                            8.4/10
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg truncate">Avengers: Endgame</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>2019</span>
+                        <span>Action</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-bold">Coming Soon</h2>
+                <a href="#" class="text-red-500 hover:underline flex items-center">
+                    See All <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="movie-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
+                            alt="The Godfather"
+                            class="w-full h-auto rounded-lg transition duration-300 group-hover:opacity-70">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
+                            <button
+                                class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-300 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                            9.2/10
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg truncate">The Godfather</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>1972</span>
+                        <span>Crime</span>
+                    </div>
+                </div>
+
+                <div class="movie-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg"
+                            alt="The Dark Knight"
+                            class="w-full h-auto rounded-lg transition duration-300 group-hover:opacity-70">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
+                            <button
+                                class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-300 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                            9.0/10
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg truncate">The Dark Knight</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>2008</span>
+                        <span>Action</span>
+                    </div>
+                </div>
+
+                <div class="movie-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="images/images (2).jpg" alt="">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
+                            <button
+                                class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-300 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                            8.9/10
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg truncate">Pulp Fiction</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>1994</span>
+                        <span>Crime</span>
+                    </div>
+                </div>
+
+                <div class="movie-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg"
+                            alt="Inception"
+                            class="w-full h-auto rounded-lg transition duration-300 group-hover:opacity-70">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
+                            <button
+                                class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-300 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                            8.8/10
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg truncate">Inception</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>2010</span>
+                        <span>Sci-Fi</span>
+                    </div>
+                </div>
+
+                <div class="movie-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg"
+                            alt="Parasite"
+                            class="w-full h-auto rounded-lg transition duration-300 group-hover:opacity-70">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
+                            <button
+                                class="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition duration-300 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
+                            8.6/10
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg truncate">Parasite</h3>
+                    <div class="flex justify-between text-gray-400 text-sm">
+                        <span>2019</span>
+                        <span>Thriller</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 bg-gray-800 bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16">Why Choose CineVerse?</h2>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="text-center">
+                    <div class="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tv text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">4K Ultra HD</h3>
+                    <p class="text-gray-300">Experience movies in stunning 4K resolution with immersive sound quality.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-mobile-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Watch Anywhere</h3>
+                    <p class="text-gray-300">Stream on your phone, tablet, laptop, and TV without limits.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg red-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-infinity text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Unlimited Content</h3>
+                    <p class="text-gray-300">Access thousands of movies and TV shows with new additions every week.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Movies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">TV Shows</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">My List</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cookie Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">GDPR</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Account</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Profile</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Settings</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Log Out</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2025 CineVerse. All rights reserved by Hutheifa😎.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
